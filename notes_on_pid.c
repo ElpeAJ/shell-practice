@@ -10,6 +10,15 @@ ID, you can use the system call getpid (man 2 getpid)
 	process.
 
 	Exercises 0.getppid
-	Write a program that prints the PID of the parent process. Run your program
-	several times within the same shell. It should be the same.
+	Write a program that prints the PID of the parent process. Run your
+	program several times within the same shell. It should be the same.
 	Does echo $$ print the same value? Why?
+	----YES because the parent process ID is const
+
+
+	1. /proc/sys/kernel/pid_max
+Write a shell script that prints the maximum value a process ID can be.
+
+Compilation for PID & PPID programs
+gcc -Wall -Werror -pedantic pid.c -o mypid && ./mypid
+gcc -Wall -Werror -pedantic ppid.c -o myppid && ./myppid
